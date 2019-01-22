@@ -157,7 +157,7 @@ def is_scrivd_port_open(scrivd):
 
 
 def main():
-    scrivd = scrivdaemon.from_scriv_conf(config.scriv_conf)
+    scrivd = ScrivDaemon.from_scriv_conf(config.scriv_conf)
     options = process_args()
 
     # check scrivd connectivity
