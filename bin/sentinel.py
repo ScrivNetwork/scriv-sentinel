@@ -60,7 +60,7 @@ def watchdog_check(scrivd):
     printdbg("leaving watchdog_check")
 
 
-def prune_expired_proposals(scrivdscrivd):
+def prune_expired_proposals(scrivd):
     # vote delete for old proposals
     for proposal in Proposal.expired(scrivd.superblockcycle()):
         proposal.vote(scrivd, VoteSignals.delete, VoteOutcomes.yes)
