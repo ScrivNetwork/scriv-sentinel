@@ -123,8 +123,8 @@ def superblock():
 
 
 def test_superblock_is_valid(superblock):
-    from scrivd import scrivdaemon
-    scrivd = scrivdaemon.from_scriv_conf(config.scriv_conf)
+    from scrivd import ScrivDaemon
+    scrivd = ScrivDaemon.from_scriv_conf(config.scriv_conf)
 
     orig = Superblock(**superblock.get_dict())  # make a copy
 
@@ -213,8 +213,8 @@ def test_serialisable_fields():
 def test_deterministic_superblock_creation(go_list_proposals):
     import scrivlib
     import misc
-    from scrivd import scrivdaemon
-    scrivd = scrivdaemon.from_scriv_conf(config.scriv_conf)
+    from scrivd import ScrivDaemon
+    scrivd = ScrivDaemon.from_scriv_conf(config.scriv_conf)
     for item in go_list_proposals:
         (go, subobj) = GovernanceObject.import_gobject_from_scrivd(scrivd, item)
 
@@ -231,8 +231,8 @@ def test_deterministic_superblock_creation(go_list_proposals):
 
 
 def test_deterministic_superblock_selection(go_list_superblocks):
-    from scrivd import scrivdaemon
-    scrivd = scrivdaemon.from_scriv_conf(config.scriv_conf)
+    from scrivd import ScrivDaemon
+    scrivd = ScrivDaemon.from_scriv_conf(config.scriv_conf)
 
     for item in go_list_superblocks:
         (go, subobj) = GovernanceObject.import_gobject_from_scrivd(scrivd, item)

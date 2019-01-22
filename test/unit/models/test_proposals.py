@@ -78,9 +78,9 @@ def proposal():
 
 
 def test_proposal_is_valid(proposal):
-    from scrivd import scrivdaemon
+    from scrivd import ScrivDaemon
     import scrivlib
-    scrivd = scrivdaemon.from_scriv_conf(config.scriv_conf)
+    scrivd = ScrivDaemon.from_scriv_conf(config.scriv_conf)
 
     orig = Proposal(**proposal.get_dict())  # make a copy
 
@@ -237,8 +237,8 @@ def test_proposal_is_deletable(proposal):
 
 # deterministic ordering
 def test_approved_and_ranked(go_list_proposals):
-    from scrivd import scrivdaemon
-    scrivd = scrivdaemon.from_scriv_conf(config.scriv_conf)
+    from scrivd import ScrivDaemon
+    scrivd = ScrivDaemon.from_scriv_conf(config.scriv_conf)
 
     for item in go_list_proposals:
         (go, subobj) = GovernanceObject.import_gobject_from_scrivd(scrivd, item)
