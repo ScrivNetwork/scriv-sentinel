@@ -13,7 +13,7 @@ from scriv_config import ScrivConfig
 def scriv_conf(**kwargs):
     defaults = {
         'rpcuser': 'usr',
-        'rpcpassword': 'passw',
+        'rpcpassword': 'EwJeV3fZTyTVozdECF627BkBMnNDwQaVLakG3A4wXYyk',
         'rpcport': 29241,
     }
 
@@ -59,7 +59,7 @@ def test_get_rpc_creds():
         assert key in creds
     assert creds.get('user') == 'usr'
     assert creds.get('password') == 'EwJeV3fZTyTVozdECF627BkBMnNDwQaVLakG3A4wXYyk'
-    assert creds.get('port') == 18988
+    assert creds.get('port') == 17001
 
 
 # ensure scriv network (mainnet, testnet) matches that specified in config
