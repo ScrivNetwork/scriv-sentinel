@@ -13,7 +13,7 @@ from decimal import Decimal
 import time
 
 
-class scrivdaemon():
+class ScrivDaemon():
     def __init__(self, **kwargs):
         host = kwargs.get('host', '127.0.0.1')
         user = kwargs.get('user')
