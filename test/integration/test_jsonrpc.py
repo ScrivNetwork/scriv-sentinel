@@ -24,7 +24,7 @@ def test_scrivd():
             genesis_hash = u'000003e4498531ba1f89172241bbb76325fc212aa5932c95d7fa273cd31830bf'
 
     creds = ScrivConfig.get_rpc_creds(config_text, network)
-    scrivd = scrivdaemon(**creds)
+    scrivd = ScrivDaemon(**creds)
     assert scrivd.rpc_command is not None
 
     assert hasattr(scrivd, 'rpc_connection')
