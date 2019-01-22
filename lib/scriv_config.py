@@ -34,7 +34,7 @@ class ScrivConfig():
         creds = {key: value for (key, value) in match}
 
         # standard Scriv defaults...
-        default_port = 7979 if (network == 'mainnet') else 17001
+        default_port = 7998 if (network == 'mainnet') else 17001
 
         # use default port for network if not specified in scriv.conf
         if not ('port' in creds):
