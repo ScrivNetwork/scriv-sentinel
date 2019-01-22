@@ -8,7 +8,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..', 'lib'))
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
 import config
 
-from scrivd import scrivdaemon
+from scrivd import ScrivDaemon
 from scriv_config import ScrivConfig
 
 
