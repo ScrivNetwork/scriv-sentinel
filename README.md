@@ -2,7 +2,7 @@
 
 An all-powerful toolset for Scriv.
 
-Sentinel is an autonomous agent for persisting, processing and automating Scriv 1.0 (Dash V12.1) governance objects and
+Sentinel is an autonomous agent for persisting, processing and automating Scriv v.1.0 (Dash v.12.1) governance objects and
 tasks.
 
 Sentinel is implemented as a Python application that binds to a local version scrivd instance on each Scriv Masternode.
